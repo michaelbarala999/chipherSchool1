@@ -1,0 +1,28 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class Outer{
+    public int x;
+    public static int y;
+    
+    static class InnerClass{
+        public int x2;
+        
+        void printdetails(int val){
+            Outer obj = new Outer();
+            obj.x = val;
+             System.out.println("value of x : "+obj.x);
+            System.out.println("value of y : "+y);
+            System.out.println("value of x2: "+x2);
+        }
+    }
+}
+class GFG {
+	public static void main (String[] args) {
+        Outer.InnerClass obj1 = new Outer.InnerClass();
+          obj1.printdetails(100);
+		   
+	}
+}
