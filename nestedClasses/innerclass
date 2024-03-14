@@ -1,0 +1,49 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class Outer{           
+    public int x;
+    public static int y;
+    
+    
+     class inner{
+         public int x2;
+         public void fun(){
+             System.out.println("hello guy's");
+         }
+         
+        
+      class inner2{
+          public void fun3(){
+              System.out.println(" fun3 from inner2 class");
+          }
+      }  
+     }
+   
+}
+class GFG {
+	public static void main (String[] args) {
+	    
+	    Outer obj = new Outer();
+	    Outer.inner innerObj = obj.new inner();
+	    Outer.inner.inner2 inner2Obj = innerObj.new inner2();
+	      inner2Obj.fun3();
+	    
+	    
+	// Outer.inner2 obj = new Outer.inner2();
+    //  Outer  obj = new Outer();
+    //         obj.x = 50;
+    //  Outer obj2 = new Outer();
+    //       obj2.x = 25;
+    //  Outer.inner innerObj = obj.new inner();
+    //   innerObj.x2 = 100;
+    //   System.out.println("value of x2 for obj : "+innerObj.x2);
+    //   System.out.println("value of x for obj; "+obj.x);
+    //  Outer.inner innerObj2 = obj2.new inner();
+    //   innerObj2.x2 = 200;
+    //   System.out.println("value of x2 for obj2 : "+innerObj2.x2);
+    //   System.out.println("value of x for obj2 : "+obj2.x);
+	}
+}
