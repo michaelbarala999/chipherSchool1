@@ -1,0 +1,45 @@
+ // nested classes at 2 lavel.
+
+import java.io.*;
+import java.util.*;
+
+class Outer{      // Outer.class   //Outer$1inner.class
+                        
+    public int x;
+    public static int y;
+    public static void fun(){      // Outer.fun();
+        System.out.println("i am fun function");
+        System.out.println(" value of y : "+y);
+    }
+    static class inner{
+            public int x2;
+            public static int y2;
+            public void fun2(){
+                System.out.println("i am fun2 ");
+                fun();
+            }
+             static class inner2{
+                public int x2;
+                public static int y2;
+                public void fun3(){
+                    System.out.println("i am fun in inside inner class ");
+                    fun();
+                }
+                public static void hello(){
+                    System.out.println("hello hello");
+                }
+    }
+    }
+    
+    
+}
+class GFG {
+	public static void main (String[] args) {
+    // Outer obj1 = new Outer();
+    //  Outer.inner.inner2 obj2 = new Outer.inner.inner2();
+    //   obj2.fun3();
+    // Outer.inner2 obj3 = new Outer.inner2();
+      Outer.inner.inner2.hello();
+       
+	}
+}
